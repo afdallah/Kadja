@@ -90,23 +90,3 @@ var Kadja = (function () {
     // Return the constructor
     return Constructor
 })();
-
-var judul = new Kadja('#judul-source', {
-    newLine: false,
-
-});
-
-var post = new Kadja('#konten-source', {
-    newLine: false,
-    callback: function (content) {
-        return marked(content)
-    }
-})
-
-
-// post.init({
-//     newLine: false,
-//     callback: function (content) {
-//         return marked(content)
-//     }
-// })

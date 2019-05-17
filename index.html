@@ -96,6 +96,20 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="main.js"></script>
+    <script src="plugin.js"></script>
+    <script>
+        // Initialize plugin
+        var judul = new Kadja('#judul-source', {
+            newLine: false,
+
+        });
+
+        var post = new Kadja('#konten-source', {
+            newLine: false,
+            callback: function (content) {
+                return marked(content)
+            }
+        })
+    </script>
 </body>
 </html>
