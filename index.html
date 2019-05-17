@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Avenir, 'Helvetica Neue', Helvetica, 'sans-serif';
+            font-size: 17px;
+        }
+
+        h1 {
+            margin-bottom: 1.3em
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .grid {
+            display: flex;
+            flex: 1;
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+
+        .grid > div {
+            width: 50%;
+            padding: 0 30px;
+            border-right: 1px solid #ddd;
+        }
+
+        .grid > div:last-child {
+            border: none;
+        }
+
+
+        label,
+        textarea,
+        input {
+            width: 100%;
+            display: block;
+        }
+
+        label {
+            margin-bottom : .7em;
+        }
+
+        input,
+        textarea {
+            border: 1px solid #ddd;
+            padding: .8em 1em;
+            margin-bottom: 3em;
+        }
+
+        textarea {
+            height: 8em;
+            font-family: Avenir, 'Helvetica Neue', Helvetica, 'sans-serif';
+        }
+    </style>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Kadja js plugin</h1>
+        <div class="grid">
+            <div>
+                <label for="judul-source">Judul</label>
+                <input type="text" name="" id="judul-source" data-mirror="#judul">
+            </div>
+            <div>
+                <label for="judul">Judul</label>
+                <h2 id="judul"></h2>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label for="konten-source">Konten</label>
+                <textarea name="" id="konten-source" data-mirror="#preview-text"></textarea>
+            </div>
+            <div>
+                <label for="preview-text">Preview text</label>
+                <div id="preview-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
